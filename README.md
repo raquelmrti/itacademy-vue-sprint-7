@@ -14,8 +14,8 @@ The second part of my Vue learning journey. This sprint will introduce routing, 
 
 **— Exercise 1**
 
--
+- Make `HomeView` view component, which contains three checkboxes, each offering a different service with varying prices. The sum of the total price is displayed below.
 
-##### ✅ Finished:
+##### ✅ Finished: 05/05/2023
 
 ---
