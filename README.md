@@ -18,4 +18,10 @@ The second part of my Vue learning journey. This sprint will introduce routing, 
 
 ##### ✅ Finished: 05/05/2023
 
+**— Exercise 2**
+
+- Make `Panell` component, which shows up when the users selects "webpage" as their desired service. This component lets the user specify how many pages and languages they want, which affects the total price. Emits had to be used in order to pass to the parent element the number of pages and languages chosen. Also, this `Panell` component is inside a [`<Transition>`](https://vuejs.org/guide/built-ins/transition.html#css-based-transitions) component, which is a built-in Vue feature that lets you apply animations to elements that enter and leave the DOM.
+
+##### ✅ Finished: 05/05/2023
+
 ---
