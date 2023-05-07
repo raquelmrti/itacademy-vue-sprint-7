@@ -1,19 +1,16 @@
 <template>
   <div class="panell my-3 border border-dark border-4 p-4 rounded-4">
 
-    <div class="row g-3">
-      <div class="col-auto">
-        <label for="numPagines" class="col-form-label">Nùmero de pàgines</label>
-      </div>
-      <div class="col-auto">
-        <input type="number" class="form-control" @change="enviaNumPagines" :value=1 min=1>
+    <div class="g-3">
+
+      <div class="col-auto d-flex mb-3">
+        <label for="numPagines" class="col-form-label me-3">Nùmero de pàgines</label>
+        <Botons :wasPaginaWebSeleccionada="wasPaginaWebSeleccionada" @num-input="enviaNumPagines" />
       </div>
 
-      <div class="col-auto">
-        <label for="numIdiomes" class="col-form-label">Nùmero de idiomes</label>
-      </div>
-      <div class="col-auto">
-        <input type="number" class="form-control" @change="enviaNumIdiomes" :value=1 min=1>
+      <div class="col-auto d-flex">
+        <label for="numIdiomes" class="col-form-label me-3">Nùmero de idiomes</label>
+        <Botons :wasPaginaWebSeleccionada="wasPaginaWebSeleccionada" @num-input="enviaNumIdiomes" />
       </div>
 
     </div>
@@ -22,14 +19,25 @@
 </template>
 
 <script>
+import Botons from "../components/Botons.vue"
+
 export default {
   name: "Panell",
+  components: {
+    Botons
+  },
+  props: {
+    wasPaginaWebSeleccionada: {
+      type: Boolean,
+      required: true
+    }
+  },
   methods: {
-    enviaNumPagines(event) {
-      this.$emit("numPagines", event.target.value)
+    enviaNumPagines(numPagines) {
+      this.$emit("numPagines", numPagines)
     },
-    enviaNumIdiomes(event) {
-      this.$emit("numIdiomes", event.target.value)
+    enviaNumIdiomes(numIdiomes) {
+      this.$emit("numIdiomes", numIdiomes)
     }
   }
 }

@@ -24,4 +24,10 @@ The second part of my Vue learning journey. This sprint will introduce routing, 
 
 ##### ✅ Finished: 05/05/2023
 
+**— Exercise 3**
+
+- Replace the input in `Panell` with a new component, `Botons`.
+
+##### ✅ Finished: 06/05/2023
+
 ---

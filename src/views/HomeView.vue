@@ -13,7 +13,8 @@
 
       <Transition>
         <div v-show="wasPaginaWebSeleccionada">
-          <Panell @num-pagines="addPagina" @num-idiomes="addIdioma" />
+          <Panell :wasPaginaWebSeleccionada="wasPaginaWebSeleccionada" @num-pagines="addPagina"
+            @num-idiomes="addIdioma" />
         </div>
       </Transition>
 
@@ -67,8 +68,8 @@ export default {
         this.preuTotal += this.numPagines * this.numIdiomes * 30
       }
     },
-    addPagina(numPagines) {
-      this.numPagines = numPagines
+    addPagina(num) {
+      this.numPagines = num
     },
     addIdioma(numIdiomes) {
       this.numIdiomes = numIdiomes
