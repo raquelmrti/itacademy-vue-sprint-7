@@ -30,4 +30,10 @@ The second part of my Vue learning journey. This sprint will introduce routing, 
 
 ##### ✅ Finished: 06/05/2023
 
+**— Exercise 4**
+
+- Add `BenvingudaView`, which shows a welcome page and a button that takes the user to `HomeView` when clicked on. Also `HomeView` now has a go back button (`$router.go(-1)`).
+
+##### ✅ Finished: 07/05/2023
+
 ---

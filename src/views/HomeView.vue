@@ -1,43 +1,42 @@
 <template>
-  <div class="container pt-4">
-    <form>
-      <p>Què vols fer?</p>
+  <form>
+    <strong>Què vols fer?</strong>
 
-      <div class="form-check d-flex">
-        <input class="form-check-input me-2" type="checkbox" :value="{ nom: 'paginaWeb', price: 500 }"
-          v-model="serveisSeleccionats" @change="calculaPreuTotal">
-        <label class="form-check-label" for="paginaWeb">
-          Una pàgina web (500€)
-        </label>
+    <div class="form-check d-flex mt-3">
+      <input class="form-check-input me-2" type="checkbox" :value="{ nom: 'paginaWeb', price: 500 }"
+        v-model="serveisSeleccionats" @change="calculaPreuTotal">
+      <label class="form-check-label" for="paginaWeb">
+        Una pàgina web (500€)
+      </label>
+    </div>
+
+    <Transition>
+      <div v-show="wasPaginaWebSeleccionada">
+        <Panell :wasPaginaWebSeleccionada="wasPaginaWebSeleccionada" @num-pagines="addPagina" @num-idiomes="addIdioma" />
       </div>
+    </Transition>
 
-      <Transition>
-        <div v-show="wasPaginaWebSeleccionada">
-          <Panell :wasPaginaWebSeleccionada="wasPaginaWebSeleccionada" @num-pagines="addPagina"
-            @num-idiomes="addIdioma" />
-        </div>
-      </Transition>
+    <div class="form-check d-flex">
+      <input class="form-check-input me-2" type="checkbox" :value="{ nom: 'consultoriaSeo', price: 300 }"
+        v-model="serveisSeleccionats" @change="calculaPreuTotal">
+      <label class="form-check-label" for="consultoriaSEO">
+        Una consultoria SEO (300€)
+      </label>
+    </div>
 
-      <div class="form-check d-flex">
-        <input class="form-check-input me-2" type="checkbox" :value="{ nom: 'consultoriaSeo', price: 300 }"
-          v-model="serveisSeleccionats" @change="calculaPreuTotal">
-        <label class="form-check-label" for="consultoriaSEO">
-          Una consultoria SEO (300€)
-        </label>
-      </div>
+    <div class="form-check d-flex">
+      <input class="form-check-input me-2" type="checkbox" :value="{ nom: 'campanyaGoogleAds', price: 200 }"
+        v-model="serveisSeleccionats" @change="calculaPreuTotal">
+      <label class="form-check-label" for="campanyaGoogleAds">
+        Una campanya de Google Ads (200€)
+      </label>
+    </div>
 
-      <div class="form-check d-flex">
-        <input class="form-check-input me-2" type="checkbox" :value="{ nom: 'campanyaGoogleAds', price: 200 }"
-          v-model="serveisSeleccionats" @change="calculaPreuTotal">
-        <label class="form-check-label" for="campanyaGoogleAds">
-          Una campanya de Google Ads (200€)
-        </label>
-      </div>
+    <p class="mt-3"><strong>Preu:</strong> {{ preuTotal }}€</p>
 
-      <p class="mt-3"><strong>Preu:</strong> {{ preuTotal }}€</p>
+  </form>
 
-    </form>
-  </div>
+  <button type="button" class="btn btn-primary" @click="$router.go(-1)">← Torna enrere</button>
 </template>
 
 <script>

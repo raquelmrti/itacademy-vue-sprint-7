@@ -46,18 +46,6 @@ export default {
 <style scoped>
 button {
   width: 40px;
-  background-color: #ec3636;
-  border: 1px solid #c52459;
-}
-
-button:hover {
-  background-color: #da1414;
-  border: 1px solid #c52459;
-}
-
-button:active {
-  background-color: #f85858 !important;
-  border: 1px solid #c52459 !important;
 }
 
 input {
