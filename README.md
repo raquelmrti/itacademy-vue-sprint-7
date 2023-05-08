@@ -20,7 +20,7 @@ The second part of my Vue learning journey. This sprint will introduce routing, 
 
 **— Exercise 2**
 
-- Make `Panell` component, which shows up when the users selects "webpage" as their desired service. This component lets the user specify how many pages and languages they want, which affects the total price. Emits had to be used in order to pass to the parent element the number of pages and languages chosen. Also, this `Panell` component is inside a [`<Transition>`](https://vuejs.org/guide/built-ins/transition.html#css-based-transitions) component, which is a built-in Vue feature that lets you apply animations to elements that enter and leave the DOM.
+- Make `Panell` component, which shows up when the users selects "webpage" as their desired service. This component lets the user specify how many pages and languages they want, which affects the total price. Emits had to be used in order to pass to the parent element the number of pages and languages chosen. Also, this `Panell` component is inside a [`Transition`](https://vuejs.org/guide/built-ins/transition.html#css-based-transitions) component, which is a built-in Vue feature that lets you apply animations to elements that enter and leave the DOM.
 
 ##### ✅ Finished: 05/05/2023
 
@@ -35,5 +35,19 @@ The second part of my Vue learning journey. This sprint will introduce routing, 
 - Add `BenvingudaView`, which shows a welcome page and a button that takes the user to `HomeView` when clicked on. Also `HomeView` now has a go back button (`$router.go(-1)`).
 
 ##### ✅ Finished: 07/05/2023
+
+---
+
+### ⭐⭐ **Level 2** ⭐⭐
+
+**— Exercise 5**
+
+- Add info buttons next to the `Botons` components that make a modal appear when clicked on, showing information to the user.
+
+**✏️ Notes**:
+
+- I learned about the built-in [`Teleport`](https://vuejs.org/guide/built-ins/teleport.html) component, which is used to move a part of a component's template somewhere outside of its own space (even outside of the Vue app). This is often used with full-screen modals due to the fact that it helps with CSS positioning.
+
+##### ✅ Finished: 08/05/2023
 
 ---
