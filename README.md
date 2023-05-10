@@ -47,7 +47,14 @@ The second part of my Vue learning journey. This sprint will introduce routing, 
 **✏️ Notes**:
 
 - I learned about the built-in [`Teleport`](https://vuejs.org/guide/built-ins/teleport.html) component, which is used to move a part of a component's template somewhere outside of its own space (even outside of the Vue app). This is often used with full-screen modals due to the fact that it helps with CSS positioning.
+- I also learned about `ref`, which is a way to reference HTML elements in Vue (instead of using `document.querySelector`, for example).
 
 ##### ✅ Finished: 08/05/2023
 
 ---
+
+**— Exercise 6**
+
+- Add a "Guarda pressupost" button that lets the user save their generated quotes. This list of quotes is rendered by a separate component, `PressupostList`.
+
+##### ✅ Finished: 09/05/2023

@@ -36,7 +36,7 @@ export default {
     },
     wasPaginaWebSeleccionada(seleccio) {
       if (!seleccio) {
-        this.num = 1
+        this.num = 0
       }
     }
   }
