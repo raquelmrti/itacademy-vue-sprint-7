@@ -32,7 +32,7 @@ The second part of my Vue learning journey. This sprint will introduce routing, 
 
 **— Exercise 4**
 
-- Add `BenvingudaView`, which shows a welcome page and a button that takes the user to `HomeView` when clicked on. Also `HomeView` now has a go back button (`$router.go(-1)`).
+- Add `BenvingudaView`, which shows a welcome page and a button that takes the user to `HomeView` when clicked on. Also `HomeView` now has a go back button (`$router.go(-1)`). Edit: I changed the go back button to a `router-link` that sends you to the welcome page, not back in history.
 
 ##### ✅ Finished: 07/05/2023
 
@@ -58,3 +58,19 @@ The second part of my Vue learning journey. This sprint will introduce routing, 
 - Add a "Guarda pressupost" button that lets the user save their generated quotes. This list of quotes is rendered by a separate component, `PressupostList`.
 
 ##### ✅ Finished: 09/05/2023
+
+**— Exercise 7**
+
+- Add a sorting button that lets the user sort the list of quotes by name and date.
+
+**✏️ Notes**:
+
+- I learned about deep watchers, which unlike regular watchers, react when the contents of an array have been updated (in other words, they trigger on nested property changes).
+
+##### ✅ Finished: 12/05/2023
+
+**— Exercise 8**
+
+- Add a search input that lets the user search specific quotes by writing the name.
+
+##### ✅ Finished: 12/05/2023

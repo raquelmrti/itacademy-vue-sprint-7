@@ -1,46 +1,48 @@
 <template>
-  <div class="d-flex">
+  <div class="d-flex align-items-center">
     <button type="button" class="btn btn-primary me-2" @click="decreix">-</button>
-    <input type="number" class="form-control" @change="enviaNum" v-model.number="num">
+
+    <input class="form-control" @change="enviaNum" v-model.number="num" />
+
     <button type="button" class="btn btn-primary ms-2" @click="augmenta">+</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Botons",
-  emits: ["numInput"],
-  data() {
-    return {
-      num: 1
-    }
-  },
+  name: "PanellBotons",
   props: {
     wasPaginaWebSeleccionada: {
       type: Boolean,
-      required: true
-    }
-  },
-  methods: {
-    decreix() {
-      if (this.num === 1) return
-      this.num--
+      required: true,
     },
-    augmenta() {
-      this.num++
-    }
+  },
+  emits: ["numInput"],
+  data() {
+    return {
+      num: 1,
+    };
   },
   watch: {
     num() {
-      this.$emit("numInput", this.num)
+      this.$emit("numInput", this.num);
     },
     wasPaginaWebSeleccionada(seleccio) {
       if (!seleccio) {
-        this.num = 0
+        this.num = 0;
       }
-    }
-  }
-}
+    },
+  },
+  methods: {
+    decreix() {
+      if (this.num === 1) return;
+      this.num--;
+    },
+    augmenta() {
+      this.num++;
+    },
+  },
+};
 </script>
 
 <style scoped>

@@ -1,7 +1,13 @@
 <template>
   <Teleport to="#modal-div">
-    <div class="modal-overlay" @click="closeModal">
-      <div ref="modal" class="modal-container border border-dark border-4 p-4 rounded-4">
+    <div
+      class="modal-overlay"
+      @click="closeModal"
+    >
+      <div
+      ref="modal"
+      class="modal-container border border-dark border-4 p-4 rounded-4"
+      >
         <slot></slot>
       </div>
     </div>
@@ -10,7 +16,7 @@
 
 <script>
 export default {
-  name: "Modal",
+  name: "PanellModal",
   emits: ["close"],
   methods: {
     closeModal(event) {
