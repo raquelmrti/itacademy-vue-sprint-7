@@ -24,8 +24,13 @@ export default {
     };
   },
   watch: {
-    num() {
-      this.$emit("numInput", this.num);
+    num(newNum) {
+      if (newNum && newNum < 0) {
+        alert("La quantitat mínima es 1")
+        this.num = 1
+      } else {
+        this.$emit("numInput", this.num);
+      }
     },
     wasPaginaWebSeleccionada(seleccio) {
       if (!seleccio) {

@@ -113,15 +113,17 @@ export default {
         : 0;
     },
     preuTotalWeb() {
-      if (this.wasPaginaWebSeleccionada) return 500 + this.preuExtresWeb;
-      return 0;
+      return this.wasPaginaWebSeleccionada ? 500 + this.preuExtresWeb : 0
     },
   },
   watch: {
-    wasPaginaWebSeleccionada() {
-      if (this.wasPaginaWebSeleccionada) {
+    wasPaginaWebSeleccionada(checked) {
+      if (checked) {
         this.numPagines = 1;
         this.numIdiomes = 1;
+      } else {
+        this.numPagines = 0;
+        this.numIdiomes = 0;
       }
     },
     numPagines() {

@@ -15,7 +15,7 @@
         id="nom-client"
         name="nom-client"
         placeholder="Introdueix nom"
-        v-model="nomClient"
+        v-model.trim="nomClient"
         required />
     </div>
 
@@ -27,7 +27,7 @@
         id="nom-pressupost"
         name="nom-pressupost"
         placeholder="Introdueix nom"
-        v-model="nomPressupost"
+        v-model.trim="nomPressupost"
         required />
     </div>
 
